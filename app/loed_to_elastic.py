@@ -56,7 +56,7 @@ class Loed_to_elastic:
                             }
                         },
                         "sentiment": {"type": "keyword"},
-                        "list_of_weapons": {"type": "text"}
+                        "list_of_weapons": {"type": "keyword"}
                     }
                 }
             }
