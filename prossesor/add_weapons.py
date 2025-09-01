@@ -51,9 +51,9 @@ class Process_on_the_data:
                     weapons_found.append(w)
 
             weapons_found = list(set(weapons_found))
-
-            action = self.update_document_with_weapons(doc_id, weapons_found)
-            actions.append(action)
+            if weapons_found:
+                action = self.update_document_with_weapons(doc_id, weapons_found)
+                actions.append(action)
         if actions:
             helpers.bulk(self.es, actions)
 
